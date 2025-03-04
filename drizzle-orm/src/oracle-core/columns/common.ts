@@ -8,8 +8,8 @@ import { AnyOracleTable, OracleTable } from "~/oracle-core/table.ts";
 
 export abstract class OracleColumn<
   T extends ColumnBaseConfig<ColumnDataType, string> = ColumnBaseConfig<ColumnDataType, string>,
-  TRuntimeConfig extends object = object,
-  TTypeConfig extends object = object,
+  TRuntimeConfig extends object = {},
+  TTypeConfig extends object = {},
 > extends Column<T, TRuntimeConfig, TTypeConfig & { dialect: "oracle" }> {
   static override readonly [entityKind]: string = "OracleColumn";
 
